@@ -1,4 +1,4 @@
-package edu.buet.cse.ocjp2014;
+package edu.buet.cse.ocjp2014.nio2;
 
 import java.io.IOException;
 import java.nio.file.Files;

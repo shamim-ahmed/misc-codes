@@ -1,4 +1,4 @@
-package edu.buet.cse.ocjp2014;
+package edu.buet.cse.ocjp2014.nio2;
 
 import java.io.IOException;
 import java.nio.file.FileVisitResult;
@@ -10,7 +10,7 @@ import java.nio.file.attribute.BasicFileAttributes;
 
 public class FileVisitorTrial {
   public static void main(String... args) {
-    Path path = Paths.get("/home/shamim/personal/temp/scjp-file-test");
+    Path path = Paths.get("/home/shamim/personal/temp/scjp-file-test/dump.sql");
     
     try {
       Files.walkFileTree(path, new CustomFileVisitor());
