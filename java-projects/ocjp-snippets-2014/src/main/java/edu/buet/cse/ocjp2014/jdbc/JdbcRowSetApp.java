@@ -19,8 +19,8 @@ public class JdbcRowSetApp {
     credentials.put("user", "root");
     credentials.put("password", "admin");
     
-    try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/ocjp_2014", credentials)) {
-      JdbcRowSet jdbcRs = new JdbcRowSetImpl(conn);
+    try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/ocjp_2014", credentials);
+         JdbcRowSet jdbcRs = new JdbcRowSetImpl(conn)) {
       jdbcRs.setCommand(query);
       jdbcRs.execute();
       
