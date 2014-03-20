@@ -10,3 +10,6 @@
 .metadata
 .class
 target
+/java-projects/nbproject/private/
+/java-projects/nbproject/
+/java-projects/manifest.mf
