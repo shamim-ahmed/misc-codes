@@ -1,4 +1,4 @@
-package edu.buet.cse.ocjp2014.misc;
+package edu.buet.cse.ocjp2014.format;
 
 import java.text.NumberFormat;
 import java.util.Locale;
