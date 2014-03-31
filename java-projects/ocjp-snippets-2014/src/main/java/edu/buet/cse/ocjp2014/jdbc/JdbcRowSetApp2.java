@@ -8,6 +8,7 @@ import javax.sql.rowset.JdbcRowSet;
  *
  * @author shamim
  */
+@SuppressWarnings("restriction")
 public class JdbcRowSetApp2 {
   public static void main(String... args) {
     final String query = "SELECT * FROM User";

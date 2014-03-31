@@ -11,6 +11,7 @@ import javax.sql.rowset.JdbcRowSet;
  *
  * @author shamim
  */
+@SuppressWarnings("restriction")
 public class JdbcRowSetListenerApp {
 
   public static void main(String... args) {
