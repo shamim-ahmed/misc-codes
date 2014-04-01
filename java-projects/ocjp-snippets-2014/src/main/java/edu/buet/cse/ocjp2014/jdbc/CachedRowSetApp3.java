@@ -5,11 +5,11 @@ import java.sql.SQLException;
 import javax.sql.rowset.CachedRowSet;
 
 /**
- * Example on updating a row using a CachedRowSet
+ * An example of inserting a row using CachedRowSet
  *
  * @author shamim
  */
-public class CachedRowSetApp2 {
+public class CachedRowSetApp3 {
 
   public static void main(String... args) {
     try (CachedRowSet crs = new CachedRowSetImpl()) {
@@ -19,17 +19,17 @@ public class CachedRowSetApp2 {
       crs.setCommand("SELECT * FROM COFFEES");
       crs.execute();
 
-      while (crs.next()) {
-        String coffeeName = crs.getString("COF_NAME");
-
-        if (coffeeName.equals("Espresso")) {
-          int total = crs.getInt("TOTAL");
-          crs.updateInt("TOTAL", total + 1);
-          crs.updateRow();
-          crs.acceptChanges();
-          System.out.println("Update committed successfully");
-        }
-      }
+      crs.moveToInsertRow();
+      crs.updateString("COF_NAME", "Arabica");
+      crs.updateInt("SUP_ID", 150);
+      crs.updateDouble("PRICE", 2.5);
+      crs.updateInt("SALES", 0);
+      crs.updateInt("TOTAL", 0);
+      crs.insertRow();
+      crs.moveToCurrentRow();
+      crs.acceptChanges();   // THIS LINE IS CRUCIAL
+    
+      System.out.println("Row added successfully");
     } catch (SQLException ex) {
       ex.printStackTrace(System.err);
     }
