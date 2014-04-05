@@ -29,6 +29,5 @@ public class CountDownLatchTrial {
         System.out.println("START !!!");
       }
     }
-   
   }
 }
