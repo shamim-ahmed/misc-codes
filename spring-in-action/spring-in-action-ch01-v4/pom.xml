@@ -29,6 +29,11 @@
       <version>${org.springframework.version}</version>
       <scope>compile</scope>
     </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter</artifactId>
+      <version>1.0.0.RELEASE</version>
+    </dependency>
     
     <!-- database related dependencies -->
     <dependency>
@@ -42,11 +47,6 @@
       <artifactId>commons-dbcp</artifactId>
       <version>1.4</version>
       <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter</artifactId>
-      <version>1.0.0.RELEASE</version>
     </dependency>
     
     <!-- misc -->
