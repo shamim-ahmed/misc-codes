@@ -14,6 +14,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <org.springframework.version>4.0.0.RELEASE</org.springframework.version>
+    <org.aspectj.version>1.7.4</org.aspectj.version>
   </properties>
 
   <dependencies>
@@ -31,10 +32,29 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-aop</artifactId>
+      <version>${org.springframework.version}</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter</artifactId>
       <version>1.0.0.RELEASE</version>
       <scope>compile</scope>
+    </dependency>
+    
+    <!-- aspectj -->
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjrt</artifactId>
+      <version>${org.aspectj.version}</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>${org.aspectj.version}</version>
     </dependency>
     
     <!-- unit testing -->
