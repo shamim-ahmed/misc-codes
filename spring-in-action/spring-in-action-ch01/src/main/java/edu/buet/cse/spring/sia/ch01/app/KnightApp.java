@@ -6,7 +6,7 @@ import edu.buet.cse.spring.sia.ch01.model.Knight;
 
 public class KnightApp {
   public static void main(String... args) {
-    Knight knight = new BraveKnight(new RescueDamselQuest());
+    Knight knight = new BraveKnight(new RescueDamselQuest(System.out));
     knight.embarkOnQuest();
   }
 }
