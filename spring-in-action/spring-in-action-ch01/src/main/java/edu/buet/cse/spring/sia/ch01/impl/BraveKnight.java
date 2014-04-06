@@ -1,13 +1,15 @@
 package edu.buet.cse.spring.sia.ch01.impl;
 
+import java.util.Objects;
+
 import edu.buet.cse.spring.sia.ch01.model.Knight;
 import edu.buet.cse.spring.sia.ch01.model.Quest;
 
-public class DamselRescuingKnight implements Knight {
+public class BraveKnight implements Knight {
   private Quest quest;
   
-  public DamselRescuingKnight() {
-    quest = new RescueDamselQuest();
+  public BraveKnight(Quest quest) {
+    this.quest = Objects.requireNonNull(quest);
   }
 
   @Override
