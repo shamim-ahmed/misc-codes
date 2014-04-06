@@ -12,9 +12,25 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <org.springframework.version>4.0.0.RELEASE</org.springframework.version>
   </properties>
 
   <dependencies>
+    <!-- spring dependencies -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>${org.springframework.version}</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter</artifactId>
+      <version>1.0.0.RELEASE</version>
+      <scope>compile</scope>
+    </dependency>
+    
+    <!-- unit testing -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
