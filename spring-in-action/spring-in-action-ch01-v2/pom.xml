@@ -9,6 +9,7 @@
 
   <name>spring-in-action-ch01</name>
   <url>http://maven.apache.org</url>
+  <description>This project demonstrates basic aspects of spring DI using Configuration annotation</description>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
