@@ -3,22 +3,20 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>edu.buet.cse.spring</groupId>
-  <artifactId>spring-in-action-ch01-v3</artifactId>
+  <artifactId>spring-in-action-ch01-v4</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>spring-in-action-ch01</name>
+  <name>spring-in-action-ch01-v4</name>
   <url>http://maven.apache.org</url>
-  <description>This project demonstrates basic aspects of Spring AOP.</description>
+  <description>This project demonstrates basic aspects of Spring JDBC integration</description>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <org.springframework.version>4.0.0.RELEASE</org.springframework.version>
-    <org.aspectj.version>1.7.4</org.aspectj.version>
   </properties>
 
   <dependencies>
-    <!-- spring dependencies -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
@@ -27,51 +25,39 @@
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
-      <artifactId>spring-context</artifactId>
+      <artifactId>spring-jdbc</artifactId>
       <version>${org.springframework.version}</version>
       <scope>compile</scope>
     </dependency>
+    
+    <!-- database related dependencies -->
     <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-aop</artifactId>
-      <version>${org.springframework.version}</version>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>5.1.28</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>commons-dbcp</groupId>
+      <artifactId>commons-dbcp</artifactId>
+      <version>1.4</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter</artifactId>
       <version>1.0.0.RELEASE</version>
-      <scope>compile</scope>
     </dependency>
     
-    <!-- aspectj -->
+    <!-- misc -->
     <dependency>
-      <groupId>org.aspectj</groupId>
-      <artifactId>aspectjrt</artifactId>
-      <version>${org.aspectj.version}</version>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.3.1</version>
       <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.aspectj</groupId>
-      <artifactId>aspectjweaver</artifactId>
-      <version>${org.aspectj.version}</version>
-    </dependency>
-    
-    <!-- unit testing -->
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.5</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.mockito</groupId>
-      <artifactId>mockito-all</artifactId>
-      <version>1.9.5</version>
-      <scope>test</scope>
     </dependency>
   </dependencies>
-
+  
   <build>
     <plugins>
       <plugin>
