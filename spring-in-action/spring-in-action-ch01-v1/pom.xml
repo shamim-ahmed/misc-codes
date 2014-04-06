@@ -2,12 +2,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>edu.buet.cse.spring</groupId>
-  <artifactId>spring-in-action-ch01-v1</artifactId>
+  <groupId>edu.buet.cse</groupId>
+  <artifactId>spring.ch01.v1</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>spring-in-action-ch01</name>
+  <name>spring-in-action-ch01-v1</name>
   <url>http://maven.apache.org</url>
   <description>This project demonstrates basic aspects of spring DI using a configuration file.</description>
 
