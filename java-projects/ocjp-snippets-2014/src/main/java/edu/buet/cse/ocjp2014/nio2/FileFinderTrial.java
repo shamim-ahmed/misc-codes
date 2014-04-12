@@ -20,7 +20,7 @@ import java.nio.file.attribute.BasicFileAttributes;
 public class FileFinderTrial {
   public static void main(String... args) {
     Path source = Paths.get("/home/shamim/personal/temp/ocjp-source");
-    String pattern = "glob:*Example\\.java";
+    String pattern = "glob:*Example.java";
     FileVisitor<Path> visitor = new CustomFileVisitor(pattern);
 
     try {
