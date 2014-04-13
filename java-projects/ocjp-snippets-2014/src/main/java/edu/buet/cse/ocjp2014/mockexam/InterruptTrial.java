@@ -2,6 +2,7 @@ package edu.buet.cse.ocjp2014.mockexam;
 
 /**
  * What happens when you interrupt another thread ?
+ * WARNING: This program will never terminate.
  * 
  * @author shamim
  * 
