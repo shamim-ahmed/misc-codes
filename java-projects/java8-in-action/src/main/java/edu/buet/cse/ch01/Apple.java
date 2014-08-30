@@ -8,18 +8,23 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 public class Apple {
   public static final double WEIGHT_THRESHOLD = 150.0;
   private final Color color;
-  private final Double weight;
+  private final double weight;
   
-  public Apple(Color color, Double weight) {
+  public Apple(Color color, double weight) {
     this.color = Objects.requireNonNull(color);
-    this.weight = Objects.requireNonNull(weight);
+    
+    if (Double.doubleToLongBits(weight) <= Double.doubleToLongBits(0.0)) {
+      throw new IllegalArgumentException(String.format("invalid value for weight: %.2f", weight));
+    }
+    
+    this.weight = weight;
   }
 
   public Color getColor() {
     return color;
   }
 
-  public Double getWeight() {
+  public double getWeight() {
     return weight;
   }
   
