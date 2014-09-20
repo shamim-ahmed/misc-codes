@@ -1,0 +1,7 @@
+DELIMITER $$
+
+CREATE PROCEDURE `get_some_users`(IN n INTEGER)
+  BEGIN
+    SELECT * FROM User
+    LIMIT n;
+  END
