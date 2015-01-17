@@ -28,6 +28,7 @@ public class App5 {
       System.out.printf("%s has been deleted successfully%n", vehicle);
     } catch (Exception ex) {
       ex.printStackTrace(System.err);
+      em.getTransaction().rollback();
     } finally {
       if (em != null) {
         em.close();

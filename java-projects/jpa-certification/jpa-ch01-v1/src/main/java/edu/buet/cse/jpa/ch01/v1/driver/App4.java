@@ -27,6 +27,7 @@ public class App4 {
       System.out.printf("%s was updated successfully%n", vehicle);
     } catch (Exception ex) {
       ex.printStackTrace(System.err);
+      em.getTransaction().rollback();
     } finally {
       if (em != null) {
         em.close();
