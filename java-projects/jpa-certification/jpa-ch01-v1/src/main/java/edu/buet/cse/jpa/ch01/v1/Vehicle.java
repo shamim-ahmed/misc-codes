@@ -7,7 +7,7 @@ import javax.persistence.Table;
 import javax.persistence.Version;
 
 @Entity
-@Table(name = "VEHICLE", schema = "jpa_db")
+@Table(name = "VEHICLE_CH01_V1", schema = "jpa_db")
 public class Vehicle {
 
   @Id
