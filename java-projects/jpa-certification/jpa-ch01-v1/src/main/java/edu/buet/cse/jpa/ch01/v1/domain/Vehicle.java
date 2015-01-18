@@ -1,4 +1,4 @@
-package edu.buet.cse.jpa.ch01.v1;
+package edu.buet.cse.jpa.ch01.v1.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -7,7 +7,7 @@ import javax.persistence.Table;
 import javax.persistence.Version;
 
 @Entity
-@Table(name = "VEHICLE", schema = "jpa_db")
+@Table(name = "VEHICLE")
 public class Vehicle {
 
   @Id

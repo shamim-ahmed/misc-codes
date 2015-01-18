@@ -4,7 +4,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import edu.buet.cse.jpa.ch01.v1.Vehicle;
+import edu.buet.cse.jpa.ch01.v1.domain.Vehicle;
 
 public class App {
   public static void main(String... args) {
