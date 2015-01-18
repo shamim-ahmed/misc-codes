@@ -15,7 +15,7 @@ public class App3 {
     EntityManager em = null;
     
     try {
-      factory = Persistence.createEntityManagerFactory("jpa-ch01-v1");
+      factory = Persistence.createEntityManagerFactory("jpa-ch01-v1-pu");
       em = factory.createEntityManager();
       
       TypedQuery<Vehicle> query = em.createQuery("SELECT v FROM Vehicle v WHERE v.make = ?1", Vehicle.class);

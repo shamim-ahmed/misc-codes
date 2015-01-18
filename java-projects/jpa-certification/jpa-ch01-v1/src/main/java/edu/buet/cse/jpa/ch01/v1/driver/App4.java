@@ -13,7 +13,7 @@ public class App4 {
     EntityManager em = null;
     
     try {
-      factory = Persistence.createEntityManagerFactory("jpa-ch01-v1");
+      factory = Persistence.createEntityManagerFactory("jpa-ch01-v1-pu");
       em = factory.createEntityManager();
       
       TypedQuery<Vehicle> query = em.createQuery("SELECT v FROM Vehicle v WHERE v.vin LIKE '%123%'", Vehicle.class);
