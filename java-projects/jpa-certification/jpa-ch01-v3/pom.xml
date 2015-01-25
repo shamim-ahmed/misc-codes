@@ -3,13 +3,13 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>edu.buet.cse</groupId>
-  <artifactId>jpa-ch01-v1</artifactId>
+  <artifactId>jpa-ch01-v3</artifactId>
   <version>1.0</version>
   <packaging>jar</packaging>
 
-  <name>jpa-ch01-v1</name>
+  <name>jpa-ch01-v3</name>
   <url>http://maven.apache.org</url>
-  <description>A Java SE project that demonstrates some basic aspects of JPA</description>
+  <description>An example of using NamedQuery annotation</description>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

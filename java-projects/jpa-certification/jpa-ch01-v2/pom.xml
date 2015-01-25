@@ -9,6 +9,7 @@
 
   <name>jpa-ch01-v2</name>
   <url>http://maven.apache.org</url>
+  <description>A full JavaEE example that demonstrates how JPA can be used with EJB and web components</description>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
