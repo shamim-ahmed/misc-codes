@@ -13,7 +13,7 @@ public class App5 {
     EntityManager em = null;
 
     try {
-      factory = Persistence.createEntityManagerFactory("jpa-ch01-v1-pu");
+      factory = Persistence.createEntityManagerFactory("jpa_pu");
       em = factory.createEntityManager();
 
       TypedQuery<Vehicle> query = em.createQuery("SELECT v FROM Vehicle v WHERE v.vin = ?1", Vehicle.class);
@@ -22,9 +22,10 @@ public class App5 {
       Vehicle vehicle = query.getSingleResult();
 
       em.getTransaction().begin();
-      em.remove(vehicle);
+      Vehicle v2 = em.merge(vehicle);   // This step is important
+      em.remove(v2);
       em.getTransaction().commit();
-
+      
       System.out.printf("%s has been deleted successfully%n", vehicle);
     } catch (Exception ex) {
       ex.printStackTrace(System.err);

@@ -13,15 +13,16 @@ public class App4 {
     EntityManager em = null;
     
     try {
-      factory = Persistence.createEntityManagerFactory("jpa-ch01-v1-pu");
+      factory = Persistence.createEntityManagerFactory("jpa_pu");
       em = factory.createEntityManager();
       
       TypedQuery<Vehicle> query = em.createQuery("SELECT v FROM Vehicle v WHERE v.vin LIKE '%123%'", Vehicle.class);
       Vehicle vehicle = query.getSingleResult();
       
       em.getTransaction().begin();
-      vehicle.setYear(2015);
-      em.persist(vehicle);
+      Vehicle v2 = em.merge(vehicle);  // This is important
+      v2.setYear(2015);
+      // No need to call persist() here !
       em.getTransaction().commit();
       
       System.out.printf("%s was updated successfully%n", vehicle);

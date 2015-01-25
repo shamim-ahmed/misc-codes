@@ -12,7 +12,7 @@ public class App {
     EntityManager entityManager = null;
     
     try {
-      entityManagerFactory = Persistence.createEntityManagerFactory("jpa-ch01-v1-pu");
+      entityManagerFactory = Persistence.createEntityManagerFactory("jpa_pu");
       entityManager = entityManagerFactory.createEntityManager();
       
       // create a new vehicle and save it
