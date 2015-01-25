@@ -7,5 +7,7 @@
 </head>
 <body>
   <h1>Hello world</h1>
+  
+  <p>Click <a href="${pageContext.request.contextPath}/vehicles">here</a> to see the list of vehicles</p>
 </body>
 </html>

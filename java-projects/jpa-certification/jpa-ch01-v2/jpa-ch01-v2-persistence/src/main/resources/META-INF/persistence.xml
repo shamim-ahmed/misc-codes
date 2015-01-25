@@ -8,5 +8,8 @@
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <jta-data-source>jdbc/jpa_db_datasource</jta-data-source>
     <class>edu.buet.cse.ch01.v2.domain.Vehicle</class>
+    <properties>
+      <property name="eclipselink.logging.level" value="FINE"/>
+    </properties>
   </persistence-unit>           
 </persistence>
