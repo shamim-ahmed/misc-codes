@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm/orm_2_0.xsd"
+  version="2.0">
+  
+  <persistence-unit-metadata>
+    <xml-mapping-metadata-complete/>
+    <persistence-unit-defaults>
+      <schema>jpa_db</schema>
+      <access>FIELD</access>
+    </persistence-unit-defaults>
+  </persistence-unit-metadata>
+  
+  <entity class="edu.buet.cse.jpa.ch01.v4.domain.Vehicle">
+    <table name="VEHICLE"/>
+    
+    <named-query name="selectAllVehicles">
+      <query>SELECT v FROM Vehicle v</query>
+      <hint name="javax.persistence.query.timeout" value="1000"/>
+      <hint name="eclipselink.cache-usage" value="DoNotCheckCache"/>
+    </named-query>
+    <named-query name="selectVehiclesByMake">
+      <query>SELECT v FROM Vehicle v WHERE v.make = ?1</query>
+      <hint name="javax.persistence.query.timeout" value="1000"></hint>
+      <hint name="eclipselink.cache-usage" value="DoNotCheckCache"/>
+    </named-query>
+    <named-query name="selectVehiclesByVinRegex">
+      <query>SELECT v FROM Vehicle v WHERE v.vin LIKE '%123%'</query>
+      <hint name="javax.persistence.query.timeout" value="1000"/>
+      <hint name="eclipselink.cache-usage" value="DoNotCheckCache"/>
+    </named-query>
+    <named-query name="selectVehiclesByVinExact">
+      <query>SELECT v FROM Vehicle v WHERE v.vin = ?1</query>
+      <hint name="javax.persistence.query.timeout" value="1000"/>
+      <hint name="eclipselink.cache-usage" value="DoNotCheckCache"/>
+    </named-query>
+    
+    <attributes>
+      <id name="vin">
+        <column name="VIN"/>
+      </id>
+      <basic name="make" optional="true">
+        <column name="MAKE"/>
+      </basic>
+      <basic name="model" optional="true">
+        <column name="MODEL"/>
+      </basic>
+      <basic name="year" optional="true">
+        <column name="MODEL_YEAR"/>
+      </basic>
+      <version name="version">
+        <column name="VERSION"/>
+      </version>
+    </attributes> 
+  </entity>
+</entity-mappings>
