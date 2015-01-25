@@ -49,6 +49,6 @@ public class Vehicle {
 
   @Override
   public String toString() {
-    return String.format("[vin = '%s', make = '%s', model = '%s']", vin, make, model);
+    return String.format("[vin = '%s', make = '%s', model = '%s', year = %d, version = %d]", vin, make, model, year, version);
   }
 }
