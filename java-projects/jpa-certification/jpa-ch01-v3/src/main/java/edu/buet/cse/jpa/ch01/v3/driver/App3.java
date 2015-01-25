@@ -18,7 +18,7 @@ public class App3 {
       factory = Persistence.createEntityManagerFactory("jpa_pu");
       em = factory.createEntityManager();
       
-      TypedQuery<Vehicle> query = em.createNamedQuery("selectOnMake", Vehicle.class);
+      TypedQuery<Vehicle> query = em.createNamedQuery("selectVehiclesByMake", Vehicle.class);
       query.setParameter(1, "sedan");
       List<Vehicle> vehicleList = query.getResultList();
       

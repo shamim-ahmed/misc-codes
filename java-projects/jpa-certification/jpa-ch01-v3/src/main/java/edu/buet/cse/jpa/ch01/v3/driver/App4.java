@@ -16,7 +16,7 @@ public class App4 {
       factory = Persistence.createEntityManagerFactory("jpa_pu");
       em = factory.createEntityManager();
       
-      TypedQuery<Vehicle> query = em.createNamedQuery("selectOnVinRegex", Vehicle.class);
+      TypedQuery<Vehicle> query = em.createNamedQuery("selectVehiclesByVinRegex", Vehicle.class);
       Vehicle vehicle = query.getSingleResult();
       
       em.getTransaction().begin();

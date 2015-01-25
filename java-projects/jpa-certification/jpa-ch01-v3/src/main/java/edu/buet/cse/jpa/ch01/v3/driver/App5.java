@@ -16,7 +16,7 @@ public class App5 {
       factory = Persistence.createEntityManagerFactory("jpa_pu");
       em = factory.createEntityManager();
 
-      TypedQuery<Vehicle> query = em.createNamedQuery("selectOnVinExact", Vehicle.class);
+      TypedQuery<Vehicle> query = em.createNamedQuery("selectVehiclesByVinExact", Vehicle.class);
       query.setParameter(1, "v12345");
 
       Vehicle vehicle = query.getSingleResult();

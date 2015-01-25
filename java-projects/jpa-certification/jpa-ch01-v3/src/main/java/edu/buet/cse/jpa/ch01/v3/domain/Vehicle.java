@@ -10,10 +10,10 @@ import javax.persistence.Version;
 
 @Entity
 @Table(name = "VEHICLE")
-@NamedQueries({ @NamedQuery(name = "selectAll", query = "SELECT v FROM Vehicle v"),
-    @NamedQuery(name = "selectOnMake", query = "SELECT v FROM Vehicle v WHERE v.make = ?1"),
-    @NamedQuery(name = "selectOnVinRegex", query = "SELECT v FROM Vehicle v WHERE v.vin LIKE '%123%'"),
-    @NamedQuery(name = "selectOnVinExact", query = "SELECT v FROM Vehicle v WHERE v.vin = ?1") })
+@NamedQueries({ @NamedQuery(name = "selectAllVehicles", query = "SELECT v FROM Vehicle v"),
+    @NamedQuery(name = "selectVehiclesByMake", query = "SELECT v FROM Vehicle v WHERE v.make = ?1"),
+    @NamedQuery(name = "selectVehiclesByVinRegex", query = "SELECT v FROM Vehicle v WHERE v.vin LIKE '%123%'"),
+    @NamedQuery(name = "selectVehiclesByVinExact", query = "SELECT v FROM Vehicle v WHERE v.vin = ?1") })
 public class Vehicle {
 
   @Id

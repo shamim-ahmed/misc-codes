@@ -18,7 +18,7 @@ public class App2 {
       entityManagerFactory = Persistence.createEntityManagerFactory("jpa_pu");
       entityManager = entityManagerFactory.createEntityManager();
       
-      TypedQuery<Vehicle> query = entityManager.createNamedQuery("selectAll", Vehicle.class);
+      TypedQuery<Vehicle> query = entityManager.createNamedQuery("selectAllVehicles", Vehicle.class);
       List<Vehicle> vehicleList = query.getResultList();
       
       for (Vehicle v : vehicleList) {
