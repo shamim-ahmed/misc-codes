@@ -12,6 +12,16 @@ import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.SecondaryTable;
 import javax.persistence.Table;
 
+/**
+ * This example demonstrates the following:
+ * <ul>
+ *   <li>use of SecondaryTable annotation</li>
+ *   <li>Use of Lob annotation</li>
+ *   <li>Lazy initialization</li>
+ * </ul>
+ * @author shamim
+ *
+ */
 @Entity
 @Table(name = "BOOK")
 @SecondaryTable(name = "CONTENT", pkJoinColumns = @PrimaryKeyJoinColumn(name = "BOOK_ID", referencedColumnName = "ID"))
