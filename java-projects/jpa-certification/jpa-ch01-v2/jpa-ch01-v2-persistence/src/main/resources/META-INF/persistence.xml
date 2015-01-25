@@ -4,9 +4,9 @@
              xmlns="http://java.sun.com/xml/ns/persistence" 
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
-  <persistence-unit name="jpa-ch01-v2-pu" transaction-type="JTA">
+  <persistence-unit name="jpa_pu" transaction-type="JTA">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-    <jta-data-source>jdbc/jpa-ch01-v2</jta-data-source>
+    <jta-data-source>jdbc/jpa_db_datasource</jta-data-source>
     <class>edu.buet.cse.ch01.v2.domain.Vehicle</class>
   </persistence-unit>           
 </persistence>

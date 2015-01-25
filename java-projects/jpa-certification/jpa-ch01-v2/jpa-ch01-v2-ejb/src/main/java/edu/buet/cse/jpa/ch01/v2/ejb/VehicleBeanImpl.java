@@ -11,7 +11,7 @@ import edu.buet.cse.ch01.v2.domain.Vehicle;
 
 @Stateless
 public class VehicleBeanImpl implements VehicleBean {
-  @PersistenceContext(unitName = "jpa-ch01-v2-pu")
+  @PersistenceContext(unitName = "jpa_pu")
   private EntityManager entityManager;
   
   @Override
