@@ -40,10 +40,10 @@
       <id name="vin">
         <column name="VIN"/>
       </id>
-      <basic name="make" optional="true">
+      <basic name="make">
         <column name="MAKE"/>
       </basic>
-      <basic name="model" optional="true">
+      <basic name="model">
         <column name="MODEL"/>
       </basic>
       <basic name="year" optional="true">
