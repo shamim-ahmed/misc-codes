@@ -9,9 +9,7 @@
 
   <name>jpa-ch02-v4</name>
   <url>http://maven.apache.org</url>
-  <description>
-    A project that demonstrates the usage of AttributeOverride annotation in the context of an Embedded definition.
-  </description>
+  <description>A project that demonstrates the use of MappedSuperClass annotation</description>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
