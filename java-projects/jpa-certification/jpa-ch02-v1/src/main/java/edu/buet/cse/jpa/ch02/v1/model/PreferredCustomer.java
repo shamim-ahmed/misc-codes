@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * This entity class demonstrates the usage of Temporal annotation
+ * This entity class demonstrates the usage of Temporal and TableGenerator annotation
  * 
  * @author shamim
  *
