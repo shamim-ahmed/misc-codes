@@ -12,6 +12,9 @@ import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.SecondaryTable;
 import javax.persistence.Table;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
 /**
  * This example demonstrates the following:
  * 
@@ -65,6 +68,10 @@ public class Book {
   }
   
   public String toString() {
-    return String.format("[id = %d, title = %s]", id, title);
+    ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE);
+    builder.append("id", id)
+           .append("title", title);
+    
+    return builder.toString();
   }
 }
