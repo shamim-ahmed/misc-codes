@@ -30,6 +30,10 @@ public class App {
       System.out.printf("%s was saved successfully%n", vehicle);
     } catch (Exception ex) {
       ex.printStackTrace(System.err);
+      
+      if (entityManager != null && entityManager.getTransaction() != null) {
+        entityManager.getTransaction().rollback();
+      }
     } finally {
       if (entityManager != null) {
         entityManager.close();
