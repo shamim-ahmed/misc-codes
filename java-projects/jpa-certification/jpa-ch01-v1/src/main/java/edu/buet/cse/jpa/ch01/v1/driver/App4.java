@@ -2,6 +2,7 @@ package edu.buet.cse.jpa.ch01.v1.driver;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
@@ -29,8 +30,12 @@ public class App4 {
     } catch (Exception ex) {
       ex.printStackTrace(System.err);
       
-      if (em != null && em.getTransaction() != null) {
-        em.getTransaction().rollback();
+      if (em != null) {
+        EntityTransaction transaction = em.getTransaction();
+
+        if (transaction != null && transaction.isActive()) {
+          transaction.rollback();
+        }
       }
     } finally {
       if (em != null) {

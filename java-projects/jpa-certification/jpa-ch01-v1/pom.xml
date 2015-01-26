@@ -16,6 +16,7 @@
   </properties>
 
   <dependencies>
+    <!-- persistence related dependencies -->
   	<dependency>
   	  <groupId>org.eclipse.persistence</groupId>
   	  <artifactId>eclipselink</artifactId>
@@ -26,6 +27,14 @@
   	  <groupId>mysql</groupId>
   	  <artifactId>mysql-connector-java</artifactId>
   	  <version>5.1.31</version>
+  	  <scope>compile</scope>
+  	</dependency>
+  	
+  	<!-- miscellaneous dependencies -->
+  	<dependency>
+  	  <groupId>org.apache.commons</groupId>
+  	  <artifactId>commons-lang3</artifactId>
+  	  <version>3.3.2</version>
   	  <scope>compile</scope>
   	</dependency>
   </dependencies>
