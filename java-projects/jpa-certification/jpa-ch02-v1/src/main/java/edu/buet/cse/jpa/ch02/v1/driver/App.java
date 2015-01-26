@@ -30,7 +30,10 @@ public class App {
       System.out.printf("The saved address is: %s%n", address);
     } catch (Exception ex) {
       ex.printStackTrace(System.err);
-      entityManager.getTransaction().rollback();
+      
+      if (entityManager != null && entityManager.getTransaction() != null) {
+        entityManager.getTransaction().rollback();
+      }
     } finally {
       if (entityManager != null) {
         entityManager.close();

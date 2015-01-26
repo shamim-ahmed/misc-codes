@@ -31,6 +31,10 @@ public class App2 {
       System.out.printf("The book %s was created successfully%n", book);
     } catch (Exception ex) {
       ex.printStackTrace(System.err);
+      
+      if (entityManager != null && entityManager.getTransaction() != null) {
+        entityManager.getTransaction().rollback();
+      }
     } finally {
       if (entityManager != null) {
         entityManager.close();
