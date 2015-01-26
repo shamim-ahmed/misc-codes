@@ -67,6 +67,7 @@ public class Book {
     this.pdf = pdf;
   }
   
+  @Override
   public String toString() {
     ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE);
     builder.append("id", id)
