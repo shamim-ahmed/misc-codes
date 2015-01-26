@@ -11,6 +11,9 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.persistence.Version;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
 /**
  * This class demonstrates the following:
  * <ul>
@@ -113,7 +116,14 @@ public class Address {
 
   @Override
   public String toString() {
-    return String.format("[id = %d, street = %s, city = %s, state = %s, country = %s]", id, street, city, state,
-        country);
+    ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE);
+    builder.append("id", id)
+           .append("street", street)
+           .append("city", city)
+           .append("state", state)
+           .append("zip", zip)
+           .append("country", country);
+    
+    return builder.toString();
   }
 }

@@ -7,6 +7,7 @@
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>edu.buet.cse.jpa.ch02.v1.model.Address</class>
     <class>edu.buet.cse.jpa.ch02.v1.model.Book</class>
+    <class>edu.buet.cse.jpa.ch02.v1.model.Order</class>
     <properties>
       <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/jpa_db"/>
