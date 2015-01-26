@@ -11,7 +11,7 @@
   <url>http://maven.apache.org</url>
   <description>
     A project that demonstrates the following features of JPA: Transient annotation, Access annotation,
-    use of GenerationType.IDENTITY
+    use of GenerationType.IDENTITY, GenerationType.TABLE, Temporal annotation, 
   </description>
 
   <properties>
