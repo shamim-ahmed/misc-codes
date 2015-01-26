@@ -6,6 +6,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Version;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
 @Entity
 @Table(name = "VEHICLE")
 public class Vehicle {
@@ -69,6 +72,13 @@ public class Vehicle {
   
   @Override
   public String toString() {
-    return String.format("[vin = '%s', make = '%s', model = '%s', year = %d, version = %d]", vin, make, model, year, version);
+    ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE);
+    builder.append("vin", vin)
+           .append("make", make)
+           .append("model", model)
+           .append("year", year)
+           .append("version", version);
+    
+    return builder.toString();
   }
 }

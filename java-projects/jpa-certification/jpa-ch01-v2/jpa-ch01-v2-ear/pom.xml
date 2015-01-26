@@ -21,6 +21,12 @@
       <type>jar</type>
     </dependency>
     <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <scope>compile</scope>
+      <type>jar</type>
+    </dependency>
+    <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>jpa-ch01-v2-ejb</artifactId>
       <version>${project.version}</version>
@@ -48,6 +54,12 @@
               <groupId>${project.groupId}</groupId>
               <artifactId>jpa-ch01-v2-persistence</artifactId>
               <bundleDir>lib</bundleDir>
+            </jarModule>
+            <jarModule>
+              <groupId>org.apache.commons</groupId>
+              <artifactId>commons-lang3</artifactId>
+              <bundleDir>lib</bundleDir>
+              <includeInApplicationXml>true</includeInApplicationXml>
             </jarModule>
             <ejbModule>
               <groupId>${project.groupId}</groupId>
