@@ -11,9 +11,7 @@
 
   <name>jpa-ch02-v6</name>
   <url>http://maven.apache.org</url>
-  <description>
-    A project that demonstrates the use of AttributeOverride annotation in the context of MappedSuperClass
-  </description>
+  <description>A project that demonstrates the use of UniqueConstraint annotation</description>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
