@@ -17,7 +17,8 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 @Entity
-@Table(name = "USER", uniqueConstraints = { @UniqueConstraint(columnNames = { "USER_NAME", "EMAIL_ADDR" }) })
+@Table(name = "USER", uniqueConstraints = { @UniqueConstraint(columnNames = { "USER_NAME" }),
+                                            @UniqueConstraint(columnNames = { "EMAIL_ADDR" }) })
 @TableGenerator(name = "userIdGenerator", table = "SEQUENCE_GENERATOR_TBL", 
                 pkColumnName = "SEQUENCE_NAME", pkColumnValue = "user_id_seq", 
                 valueColumnName = "SEQUENCE_VALUE", initialValue = 1, allocationSize = 1)
