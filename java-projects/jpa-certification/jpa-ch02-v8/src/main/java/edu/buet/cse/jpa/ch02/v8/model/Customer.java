@@ -11,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Version;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
@@ -31,9 +32,13 @@ public class Customer {
 
   @Column(name = "LAST_NAME")
   private String lastName;
-
+  
   @OneToMany(mappedBy = "customer", orphanRemoval = true, cascade = { CascadeType.PERSIST, CascadeType.REMOVE })
   private List<Order> orders = new ArrayList<>();
+  
+  @Version
+  @Column(name = "VERSION")
+  private Long version;
 
   public Long getId() {
     return id;
@@ -74,6 +79,14 @@ public class Customer {
   public void setOrders(List<Order> orders) {
     this.orders = orders;
   }
+  
+  public Long getVersion() {
+    return version;
+  }
+
+  public void setVersion(Long version) {
+    this.version = version;
+  }
 
   @Override
   public String toString() {
@@ -81,7 +94,8 @@ public class Customer {
     builder.append("id", id)
       .append("email", email)
       .append("firstName", firstName)
-      .append("lastName", lastName);
+      .append("lastName", lastName)
+      .append("version", version);
 
     return builder.toString();
   }

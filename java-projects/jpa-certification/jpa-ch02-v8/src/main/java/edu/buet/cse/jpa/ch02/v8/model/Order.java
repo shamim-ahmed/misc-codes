@@ -12,6 +12,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Version;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
@@ -30,6 +31,10 @@ public class Order {
 
   @Column(name = "PRICE", nullable = false)
   private Double price;
+  
+  @Version
+  @Column(name = "VERSION")
+  private Long version;
 
   @ManyToOne
   @JoinColumn(name = "CUSTOMER_ID_FK", referencedColumnName = "CUSTOMER_ID")
@@ -58,6 +63,14 @@ public class Order {
   public void setPrice(Double price) {
     this.price = price;
   }
+  
+  public Long getVersion() {
+    return version;
+  }
+
+  public void setVersion(Long version) {
+    this.version = version;
+  }
 
   public Customer getCustomer() {
     return customer;
@@ -73,6 +86,7 @@ public class Order {
     builder.append("id", id)
       .append("placementTime", placementTime)
       .append("price", price)
+      .append("version", version)
       .append("customer", customer);
 
     return builder.toString();
