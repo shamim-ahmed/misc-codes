@@ -33,8 +33,8 @@ public class Customer {
   @Column(name = "LAST_NAME")
   private String lastName;
   
-  // only PERSIST operations are cascaded. I want to see if orphaned orders remain in database
-  @OneToMany(mappedBy = "customer", orphanRemoval = true, cascade = { CascadeType.PERSIST })
+  // only PERSIST operations are cascaded. I want to see if orphaned orders remain in database.
+  @OneToMany(mappedBy = "customer", orphanRemoval = false, cascade = { CascadeType.PERSIST })
   private List<Order> orders = new ArrayList<>();
   
   @Version

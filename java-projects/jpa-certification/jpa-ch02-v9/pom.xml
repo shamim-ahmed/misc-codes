@@ -12,7 +12,8 @@
   <name>jpa-ch02-v9</name>
   <url>http://maven.apache.org</url>
   <description>
-  	A project that demonstrates how lazy loading works in the context of one-to-many relationships.
+  	A project that demonstrates how lazy loading works in the context of one-to-many relationships. This project
+  	also contains an example of non-cascading delete, which retains orphan entities in database.
   </description>
 
   <properties>
