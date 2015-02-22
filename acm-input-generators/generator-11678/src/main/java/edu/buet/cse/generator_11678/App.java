@@ -8,8 +8,8 @@ public class App {
   private static final String SPACE = " ";
   
   private static final int NUMBER_OF_CASES = 2;
-  private static final int MAX_NO_OF_CARDS = 10000;
-  private static final int MAX_CARD_VALUE = 100000;
+  private static final int MAX_NO_OF_CARDS = 100;
+  private static final int MAX_CARD_VALUE = 1000;
 
   public static void main(String[] args) {
     generate(System.out);
@@ -50,6 +50,7 @@ public class App {
       resultBuilder.append(LINE_SEPARATOR);
     }
 
+    resultBuilder.append(0).append(SPACE).append(0);
     outputStream.print(resultBuilder.toString());
   }
 }
