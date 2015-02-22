@@ -9,8 +9,8 @@ public class App {
   private static final String SPACE = " ";
 
   private static final int NUMBER_OF_CASES = 16;
-  private static final int MAX_NO_OF_CARDS = 1000;
-  private static final int MAX_CARD_VALUE = 10000;
+  private static final int MAX_NO_OF_CARDS = 10000;
+  private static final int MAX_CARD_VALUE = 100000;
 
   public static void main(String[] args) {
     generate(System.out);
