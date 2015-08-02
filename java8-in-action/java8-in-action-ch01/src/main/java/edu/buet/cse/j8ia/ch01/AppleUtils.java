@@ -3,7 +3,7 @@ package edu.buet.cse.j8ia.ch01;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AppleFactory {
+public class AppleUtils {
   private static Color[] COLORS = {Color.RED, Color.GREEN, Color.BROWN, Color.RED, Color.BROWN};
   private static double[] WEIGHTS = {125.0, 120.0, 145.0, 150.0, 175.0};
   
@@ -25,6 +25,6 @@ public class AppleFactory {
     return Double.doubleToLongBits(apple.getWeight()) >= Double.doubleToLongBits(150.0);
   }
   
-  private AppleFactory() {
+  private AppleUtils() {
   }
 }
