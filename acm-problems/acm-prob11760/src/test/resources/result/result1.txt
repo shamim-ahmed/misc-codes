@@ -1,2 +1,0 @@
-Case 1: Escaped again! More 2D grid problems!
-Case 2: Party time! Let's find a restaurant!
