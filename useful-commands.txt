@@ -1,4 +1,4 @@
-rsync -auv --delete --ignore-errors /home/shamim /media/shamim/shamim/linux-backups/phoenix
+rsync -auv --delete --ignore-errors --exclude=".*" /home/shamim /media/shamim/shamim/linux-backups/phoenix
 
 https://www.howtogeek.com/135533/how-to-use-rsync-to-backup-your-data-on-linux/
 https://apple.stackexchange.com/questions/39504/best-way-to-copy-all-files-ignoring-errors
